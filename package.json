@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "gl-react-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "glslify"
+    ]
+  },
+  "scripts": {
+    "start": "budo index.js:bundle.js --live | garnish",
+    "build": "NODE_ENV=production browserify index.js | uglifyjs -cm > bundle.js"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "budo": "^4.1.0",
+    "eslint": "^1.7.3",
+    "eslint-plugin-react": "^3.6.3",
+    "garnish": "^2.2.2",
+    "uglify-js": "^2.4.24"
+  },
+  "dependencies": {
+    "gl-react": "^1.2.5",
+    "gl-react-inspector": "0.0.3",
+    "glslify": "^2.3.1",
+    "ndarray": "^1.0.18",
+    "react": "^0.14.1",
+    "react-canvas": "gre/react-canvas#react-0.14",
+    "react-dom": "^0.14.1"
+  }
+}
